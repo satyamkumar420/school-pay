@@ -5,8 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "dev": "nodemon index.js"
+    "start": "node dist/index.js",
+    "dev": "nodemon index.js",
+    "prebuild": "rm -rf dist",
+    "build": "babel . -d dist --copy-files --ignore node_modules"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,9 @@
     "uuid": "^13.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
     "chai": "^6.0.1",
     "mocha": "^11.7.2",
     "nodemon": "^3.1.10",
