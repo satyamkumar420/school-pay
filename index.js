@@ -22,7 +22,6 @@ app.use(express.json({ extended: false }));
 
 // 🌐 Define the port
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 // 🏠 Default route
 app.get("/", (req, res) => {
